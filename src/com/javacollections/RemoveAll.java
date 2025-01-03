@@ -12,12 +12,12 @@ list that are greater than a specific value
 */
 public class RemoveAll {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 7, 8, 9, 55, 6, 4, 4, 8, 8, 9, 9, 7));
 		System.out.println("List of elements: " + list);
 
 		System.out.println("Enter the number: ");
-		int number = sc.nextInt();
+		int number = scan.nextInt();
 		Iterator<Integer> iterator = list
 				.iterator(); /*
 								 * The Iterator was introduced in Java to solve the problem of safe removal of
@@ -36,7 +36,7 @@ public class RemoveAll {
 		System.out.println();
 		System.out.println("Result List: " + list);
 
-		sc.close();
+		scan.close();
 	}
 
 }
