@@ -35,5 +35,44 @@ public class Denominations {
 		
 		System.out.println("500's:"+Denomination500+" 50's:"+Denomination50+" 10's:"+Denomination10+" 1's:"+Denomination1);
 		scan.close();
+		
+//		package com.java.codingexercises;
+//
+//		import java.util.Scanner;
+//
+//		public class Denominations {
+//		    public static void main(String[] args) {
+//		        Scanner scan = new Scanner(System.in);
+//		        System.out.println("Enter the amount: ");
+//
+//		        int amount = scan.nextInt();
+//		        if (amount < 0) {
+//		            System.out.println("Invalid input. Please enter a non-negative amount.");
+//		            scan.close();
+//		            return;
+//		        }
+//
+//		        // Define available denominations
+//		        int[] denominations = {500, 200, 100, 50, 20, 10, 5, 2, 1};
+//		        int[] counts = new int[denominations.length];
+//
+//		        // Calculate denominations
+//		        for (int i = 0; i < denominations.length; i++) {
+//		            counts[i] = amount / denominations[i];
+//		            amount %= denominations[i];
+//		        }
+//
+//		        // Display the results
+//		        System.out.println("Denominations:");
+//		        for (int i = 0; i < denominations.length; i++) {
+//		            if (counts[i] > 0) {
+//		                System.out.println(denominations[i] + "'s: " + counts[i]);
+//		            }
+//		        }
+//
+//		        scan.close();
+//		    }
+//		}
+
 	}
 }
