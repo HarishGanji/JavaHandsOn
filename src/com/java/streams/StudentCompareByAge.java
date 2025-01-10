@@ -48,7 +48,7 @@ class Student {
 
 	@Override
 	public String toString() {
-		return "Name:" +name + ", Age: "+age + ", RollNumber: "+rollNumber;
+		return "Name:" + name + ", Age: " + age + ", RollNumber: " + rollNumber;
 	}
 
 }
@@ -72,8 +72,7 @@ public class StudentCompareByAge {
 		stu.add(s1);
 		stu.add(s2);
 
-		List<Student> byAge = stu.stream().sorted(Comparator.comparing(Student::getName))
-				.collect(Collectors.toList());
+		List<Student> byAge = stu.stream().sorted(Comparator.comparing(Student::getName)).collect(Collectors.toList());
 
 		byAge.forEach(System.out::println);
 	}
