@@ -10,7 +10,7 @@ public class Vowels {
 		List<String> list = Arrays.asList("Indian", "Arizona", "Fly", "mrp", "prp");
 		List<String> newList = list.stream().filter(ele -> {
 			List<Character> characters = Arrays.asList('a', 'e', 'i', 'o', 'u');
-			return ele.chars().mapToObj(c -> (char) c).anyMatch(characters::contains);
+			return ele.toLowerCase().chars().mapToObj(c -> (char) c).anyMatch(characters::contains);
 		}).collect(Collectors.toList());
 
 		newList.forEach(System.out::println);
