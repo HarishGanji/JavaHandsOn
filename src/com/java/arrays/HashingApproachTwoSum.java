@@ -1,13 +1,14 @@
 package com.java.arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
-//Two pointer method
-public class TwoSumSecondApproach {
-	public static void main(String args[]) {
+public class HashingApproachTwoSum {
+
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of the array that you want to fill: ");
 		int size = sc.nextInt();
@@ -25,25 +26,19 @@ public class TwoSumSecondApproach {
 		sc.close();
 	}
 
-	public static List<String> findTwoSum(int[] array, int target) {
-		Arrays.sort(array);
-		int left = 0;
-		int right = array.length - 1;
-		List<String> result = new ArrayList<>();
-		while (left < right) {
-			int sum = array[left] + array[right];
-			if (sum == target) {
-				result.add("(" + array[left] + " ," + array[right] + ")");
-				left++;
-				right--;
-			} else if (sum > target) {
-				right--;
-			} else {
-				left++;
+	private static List<String> findTwoSum(int[] array, int target) {
+		Set<Integer> uniqueData = new HashSet<>();
+		List<String> listResult = new ArrayList<>();
+		for(int arr:array) {
+			int difference = target - arr;
+			if(uniqueData.contains(difference)) {
+				listResult.add("(" + difference + " ," + arr + ")");
 			}
+			uniqueData.add(arr);
 		}
-		return result;
+		return listResult;
 	}
+
 }
 //Two Sum:
 //
