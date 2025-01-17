@@ -2,20 +2,20 @@ package com.java.codingexercises;
 
 import java.util.Scanner;
 
-public class RightAngledTriangleOpposite {
+public class InvertedRightAngledTriangleNumber {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number: ");
 		int number = sc.nextInt();
-		int spaces = 4;
+		int printNum = number;
 		for (int i = 0; i < number; i++) {
-			for (int j = 0; j < spaces; j++) {
+			for (int l = 0; l < i; l++) {
 				System.out.print("  ");
 			}
-			for (int k = 0; k < i + 1; k++) {
-				System.out.print("* ");
+			for (int j = 0; j < printNum; j++) {
+				System.out.print(printNum+" ");
 			}
-			spaces--;
+			printNum--;
 			System.out.println();
 		}
 		sc.close();
