@@ -57,14 +57,17 @@ public class Person {
 		Person p2 = new Person("Prakash", 50, "Bengaluru");
 		Person p4 = new Person("Ratnavel", 25, "Chennai");
 		Person p3 = new Person("Ericson", 52, "Kolkata");
+		Person p5 = new Person("kid", 18, "Rajamundry");
 
 		List<Person> personList = new ArrayList<>();
 		personList.add(p1);
 		personList.add(p2);
 		personList.add(p3);
 		personList.add(p4);
+		personList.add(p5);
 
-		List<Person> newList = personList.stream().sorted(Comparator.comparing(Person::getAge))// .reveresed
+		List<Person> newList = personList.stream().filter(ele -> ele.getAge() >= 18)
+				.sorted(Comparator.comparing(Person::getAge))// .reveresed
 				.collect(Collectors.toList());
 		newList.forEach(System.out::println);
 	}
