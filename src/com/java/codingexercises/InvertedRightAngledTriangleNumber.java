@@ -13,7 +13,7 @@ public class InvertedRightAngledTriangleNumber {
 				System.out.print("  ");
 			}
 			for (int j = 0; j < printNum; j++) {
-				System.out.print(printNum+" ");
+				System.out.print(printNum + " ");
 			}
 			printNum--;
 			System.out.println();
