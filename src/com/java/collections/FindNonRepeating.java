@@ -18,7 +18,7 @@ public class FindNonRepeating {
 			}
 		}
 		int newList = nonRepeatingTracking.entrySet().stream().filter(ele -> ele.getValue() == 1)
-				.map(ele -> ele.getKey()).findFirst().get();
+				.map(ele -> ele.getKey()).findFirst().orElse(null);
 		System.out.println("NonRepeating number is: " + newList);
 
 	}
