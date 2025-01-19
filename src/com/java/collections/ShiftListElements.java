@@ -10,6 +10,7 @@ public class ShiftListElements {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter number of positions: ");
 		int positionNumber = sc.nextInt();
+		sc.nextLine();
 		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 		System.out.println("Enter left or right: ");
 		String rotate = (sc.nextLine()).toLowerCase();
@@ -23,6 +24,7 @@ public class ShiftListElements {
 		}
 
 		sc.close();
+
 	}
 
 	public static List<Integer> rotateright(List<Integer> list, int positionNumber) {
@@ -38,4 +40,5 @@ public class ShiftListElements {
 		checkList.addAll(list.subList(0, positionNumber));
 		return checkList;
 	}
+
 }
