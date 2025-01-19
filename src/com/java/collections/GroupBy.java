@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 //Group Elements in List by Frequency: Group the elements in a list based on how frequently they occur, returning a map of element to its frequency.
 public class GroupBy {
@@ -23,7 +21,8 @@ public class GroupBy {
 		}
 		System.out.println(frequencyMap);
 
-		//using streams grouping by
+		
+		// using streams grouping by
 //		Map<Integer, Long> newList = listOfIntegers.stream()
 //				.collect(Collectors.groupingBy(num -> num, Collectors.counting()));
 //		System.out.println(newList);
