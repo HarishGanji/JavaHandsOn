@@ -57,7 +57,7 @@ public class Person {
 		Person p2 = new Person("Prakash", 50, "Bengaluru");
 		Person p4 = new Person("Ratnavel", 25, "Chennai");
 		Person p3 = new Person("Ericson", 52, "Kolkata");
-		Person p5 = new Person("kid", 18, "Rajamundry");
+		Person p5 = new Person("kid", 8, "Rajamundry");
 
 		List<Person> personList = new ArrayList<>();
 		personList.add(p1);
