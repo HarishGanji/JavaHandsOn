@@ -9,7 +9,7 @@ public class ShiftListElements {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter number of positions: ");
-		int positionNumber = 2;
+		int positionNumber = sc.nextInt();
 		List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 		System.out.println("Enter left or right: ");
 		String rotate = (sc.nextLine()).toLowerCase();
@@ -22,6 +22,7 @@ public class ShiftListElements {
 			System.out.println(newList);
 		}
 
+		sc.close();
 	}
 
 	public static List<Integer> rotateright(List<Integer> list, int positionNumber) {
